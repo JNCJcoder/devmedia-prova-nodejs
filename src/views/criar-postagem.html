@@ -1,0 +1,31 @@
+{% extends "layout.html"  %}
+
+{% block title %}		
+	<title>Criar Noticia - DevMedia - Prova</title>
+{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="./styles/post.css">
+{% endblock styles %}
+
+<main>
+{% block content %}
+    <div class="createPostContainer">
+        {% if msg %}
+        <h1>{{ msg }}</h1>
+        {% endif %}
+        <h3 align="center">Criar Noticia</h3>
+        <form action="" method="post" class="formContainer">
+            <input type="text" name="titulo" id="titulo" placeholder="Titulo da noticia" required>
+            <input type="text" name="categoria" id="categoria" placeholder="Categoria da noticia" required>
+            <textarea name="conteudo" id="conteudo" cols="5" rows="5" placeholder="Conteudo da noticia" required></textarea>
+            <button type="submit">Criar</button>
+        </form>
+    </div>
+
+{% endblock content %}
+</main>
+
+{% block scripts %}
+	<script src="./scripts/criar-postagem.js"></script>
+{% endblock scripts %}

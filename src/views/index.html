@@ -1,0 +1,22 @@
+{% extends "layout.html"  %}
+
+{% block styles %}
+	<link rel="stylesheet" href="./styles/noticia.css">
+{% endblock styles %}
+
+{% block content %}
+    {% if total > 0 %}
+    <!-- <div class="container"> -->
+		{% for noticia in noticias %}
+			<div class="noticiaContainer">
+				<h1>{{ noticia.titulo }}</h1>
+                <h5>Categoria: {{ noticia.categoria }}</h5>
+				<pre>{{ noticia.conteudo }}</pre>
+				<a href="noticia?id={{ noticia.id }}" class="menuButton">Ler mais</a>
+			</div>
+		{% endfor %}
+		<!-- </div> -->
+    {% else  %}
+		<h4><strong>Nenhuma</strong> noticia encontrada.</h4>
+    {% endif %}
+{% endblock content %}

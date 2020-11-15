@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% block title %}		
+			<title>DevMedia - Prova</title>
+		{% endblock title %}
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">	
+		<link rel="stylesheet" href="./styles/layout.css">
+		{% block styles %}
+
+		{% endblock styles %}
+	</head>
+	<body>
+		{% include "Partials/header.html"  %}
+			<div class="content">
+			{% block content  %}
+			{% endblock content %}
+			</div>
+		{% include "Partials/footer.html"  %}
+	</body>
+</html>
